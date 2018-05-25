@@ -1,0 +1,46 @@
+{
+  "name": "nativescript-app-environment",
+  "version": "1.0.0",
+  "description": "Set release info to json",
+  "nativescript": {
+    "hooks": [
+      {
+        "type": "before-prepare",
+        "script": "lib/before-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:m-abs/nativescript-app-environment.git"
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js",
+    "prepublish": "npx rimraf lib && npx tsc"
+  },
+  "keywords": [
+    "nativescript",
+    "hooks",
+    "hook",
+    "build",
+    "release",
+    "info"
+  ],
+  "author": {
+    "email": "m_abs@mabs.dk",
+    "url": "https://mabs.dk",
+    "name": "Morten Sjøgren"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "nativescript-hook": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.1.2",
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3"
+  }
+}
