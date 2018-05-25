@@ -18,7 +18,7 @@
   "scripts": {
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js",
-    "prepublish": "npx rimraf lib && npx tsc"
+    "prepare": "npx rimraf lib && npx tsc"
   },
   "keywords": [
     "nativescript",
